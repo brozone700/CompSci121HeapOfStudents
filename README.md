@@ -7,9 +7,10 @@ classDiagram
         -int day
         -int year
         +Date()
+        +Date(int month, int day, int year)
         +init(int month, int day, int year) void
-        +initFromString(string mmddyyyy) void
-        +printShort() void
+        +init(string mmddyyyy) void
+        +printDate() void
         +printLong() void
     }
 
@@ -19,8 +20,9 @@ classDiagram
         -string state
         -string zip
         +Address()
+        +Address(string street, string city, string state, string zip)
         +init(string street, string city, string state, string zip) void
-        +print() void
+        +printAddress() void
     }
 
     class Student {
@@ -31,8 +33,11 @@ classDiagram
         -Date expectedGradDate
         -int creditHours
         +Student()
+        +Student(string firstName, string lastName, Address address, Date birthdate, Date expectedGradDate, int creditHours)
         +init(string firstName, string lastName, Address address, Date birthdate, Date expectedGradDate, int creditHours) void
-        +print() void
+        +init(string csvLine) void
+        +printStudent() void
+        +getLastFirst() string
     }
 
     Student *-- "1" Address : address
