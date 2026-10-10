@@ -17,4 +17,4 @@ class Student {
     void init(string csvLine);
     void printStudent();
     string getLastFirst();
-}
+};

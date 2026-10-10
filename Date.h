@@ -1,6 +1,3 @@
-#ifndef DATE_H
-#define DATE_H
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,5 +15,3 @@ class Date {
         void printDate();
         void printLong();
 };
-
-#endif

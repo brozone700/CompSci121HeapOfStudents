@@ -1,21 +1,20 @@
-#ifndef ADDRESS_H
-#define ADDRESS_H
-
 #include <iostream>
 #include <string>
 using namespace std;
 
-class Address {
-    private:
-        string street;
-        string city;
-        string state;
-        string zip;
-    public:
-        Address();
-        Address(string street, string city, string state, string zip);
-        void init(string street, string city, string state, string zip);
-        void printAddress();
+class Student {
+  private:
+    string firstName;
+    string lastName;
+    Address address;
+    Date birthdate;
+    Date expectedGradDate;
+    int creditHours;
+  public:
+    Student();
+    Student(string firstName, string lastName, Address address, Date birthdate, Date expectedGradDate, int creditHours);
+    void init(string firstName, string lastName, Address address, Date birthdate, Date expectedGradDate, int creditHours);
+    void init(string csvLine);
+    void printStudent();
+    string getLastFirst();
 };
-
-#endif
