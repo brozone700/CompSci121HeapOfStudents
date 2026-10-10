@@ -9,7 +9,6 @@ classDiagram
         +Date()
         +init(int month, int day, int year) void
         +initFromString(string mmddyyyy) void
-        +isValid() bool
         +printShort() void
         +printLong() void
     }
